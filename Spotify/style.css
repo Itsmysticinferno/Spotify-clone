@@ -217,3 +217,31 @@ body::-webkit-scrollbar{
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
+@media screen and (max-width: 685px) {
+    .songBanner{
+    display: none;
+    }
+
+    .songList{
+        /* background: red; */
+        
+        width: 100%;
+        border-radius: 10px;
+    }
+    nav ul{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        height: 65px;
+        width: 755px;
+        background-color: black;
+        color: white;
+    }
+    .container{
+        width: 80%;
+        left: 10%;
+    }
+    .bottom{
+         width: 755px;
+    }
+}
