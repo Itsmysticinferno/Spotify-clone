@@ -244,4 +244,15 @@ body::-webkit-scrollbar{
     .bottom{
          width: 755px;
     }
+    .songInfo{
+         display: flex;
+         margin-bottom: 16px;
+        left: 34%;     
+       }
+       .icons {
+        display: flex;
+        padding: 1px;
+      margin-top: 39px;
+       
+    }
 }
