@@ -183,3 +183,18 @@ document.getElementById('previous').addEventListener('click', ()=>{
   masterPlay.classList.remove('fa-circle-play');
    masterPlay.classList.add('fa-circle-pause');
 })
+
+audioElement.addEventListener('ended', () => {
+  // Play the next song
+  index = (index + 1) % songs.length; // Move to the next song in a circular manner
+  audioElement.src = songs[index].filePath;
+  audioElement.currentTime = 0; // Reset the currentTime to start from the beginning
+  masterSongName.innerText = songs[index].songName;
+
+  // Start playing the next song
+  audioElement.play();
+  gif.style.opacity = 1;
+  makeAllPlays();
+  document.getElementById(index).classList.remove('fa-circle-play');
+  document.getElementById(index).classList.add('fa-circle-pause');
+});
